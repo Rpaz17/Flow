@@ -30,10 +30,16 @@ public class FlowSwing extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         musica = new javax.swing.JList<>();
+        pplabel = new javax.swing.JLabel();
+        stoplabel = new javax.swing.JLabel();
+        nextlabel = new javax.swing.JLabel();
+        nextlabel1 = new javax.swing.JLabel();
         play = new javax.swing.JLabel();
         pause = new javax.swing.JLabel();
         stop = new javax.swing.JLabel();
         btnAddMusic = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        gif = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,44 +50,87 @@ public class FlowSwing extends javax.swing.JFrame {
         musica.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(musica);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 390, 580));
 
+        pplabel.setBackground(new java.awt.Color(0, 0, 0));
+        pplabel.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        pplabel.setForeground(new java.awt.Color(255, 255, 255));
+        pplabel.setText("PLAY");
+        pplabel.setOpaque(true);
+        getContentPane().add(pplabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 100, 40));
+
+        stoplabel.setBackground(new java.awt.Color(0, 0, 0));
+        stoplabel.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        stoplabel.setForeground(new java.awt.Color(255, 255, 255));
+        stoplabel.setText("STOP");
+        stoplabel.setOpaque(true);
+        getContentPane().add(stoplabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, 120, 40));
+
+        nextlabel.setBackground(new java.awt.Color(0, 0, 0));
+        nextlabel.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        nextlabel.setForeground(new java.awt.Color(255, 255, 255));
+        nextlabel.setText("SELECT");
+        nextlabel.setOpaque(true);
+        getContentPane().add(nextlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 160, 30));
+
+        nextlabel1.setBackground(new java.awt.Color(0, 0, 0));
+        nextlabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        nextlabel1.setForeground(new java.awt.Color(255, 255, 255));
+        nextlabel1.setText("NEXT OR");
+        nextlabel1.setOpaque(true);
+        getContentPane().add(nextlabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 160, 30));
+
+        play.setBackground(new java.awt.Color(255, 255, 255));
         play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/playboton.png"))); // NOI18N
+        play.setOpaque(true);
         play.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 playMouseClicked(evt);
             }
         });
-        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 110, 100));
+        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 100, 100));
 
+        pause.setBackground(new java.awt.Color(255, 255, 255));
         pause.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pauseiconeditado.png"))); // NOI18N
+        pause.setOpaque(true);
         pause.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pauseMouseClicked(evt);
             }
         });
-        getContentPane().add(pause, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 130, 120));
+        getContentPane().add(pause, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 110, 100));
 
+        stop.setBackground(new java.awt.Color(255, 255, 255));
         stop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/imageeditado.png"))); // NOI18N
+        stop.setOpaque(true);
         stop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 stopMouseClicked(evt);
             }
         });
-        getContentPane().add(stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 130, 100));
+        getContentPane().add(stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 110, 100));
 
-        btnAddMusic.setBackground(new java.awt.Color(204, 204, 255));
+        btnAddMusic.setBackground(new java.awt.Color(255, 255, 255));
         btnAddMusic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addmusica.png"))); // NOI18N
         btnAddMusic.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddMusicActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAddMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 190, 190));
+        getContentPane().add(btnAddMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 410, 190, 190));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fondoastetik2.jpg"))); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 48)); // NOI18N
+        jLabel1.setText("FLOW");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 140, 80));
+
+        gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fondo_prueba1.gif"))); // NOI18N
+        getContentPane().add(gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 210, 540, 260));
+
+        fondo.setBackground(new java.awt.Color(0, 0, 0));
         fondo.setOpaque(true);
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 580));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,7 +176,13 @@ public class FlowSwing extends javax.swing.JFrame {
     }//GEN-LAST:event_playMouseClicked
 
     private void pauseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pauseMouseClicked
-        mp3player.pause();
+        if(mp3player.isPaused()){
+            mp3player.play();
+            pplabel.setText("PAUSE");
+        }else{
+            mp3player.pause();
+            pplabel.setText("PLAY");
+        }
     }//GEN-LAST:event_pauseMouseClicked
 
 
@@ -166,11 +221,16 @@ public class FlowSwing extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddMusic;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel gif;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> musica;
-    private javax.swing.JScrollPane panel;
+    private javax.swing.JLabel nextlabel;
+    private javax.swing.JLabel nextlabel1;
     private javax.swing.JLabel pause;
     private javax.swing.JLabel play;
+    private javax.swing.JLabel pplabel;
     private javax.swing.JLabel stop;
+    private javax.swing.JLabel stoplabel;
     // End of variables declaration//GEN-END:variables
 }
