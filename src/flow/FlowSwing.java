@@ -44,7 +44,7 @@ public class FlowSwing extends javax.swing.JFrame {
         musica.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(musica);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 620, 320));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 230));
 
         play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/playboton.png"))); // NOI18N
         play.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -52,7 +52,7 @@ public class FlowSwing extends javax.swing.JFrame {
                 playMouseClicked(evt);
             }
         });
-        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 110, 100));
+        getContentPane().add(play, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 110, 100));
 
         pause.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pauseiconeditado.png"))); // NOI18N
         pause.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -60,7 +60,7 @@ public class FlowSwing extends javax.swing.JFrame {
                 pauseMouseClicked(evt);
             }
         });
-        getContentPane().add(pause, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 130, 120));
+        getContentPane().add(pause, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 130, 120));
 
         stop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/imageeditado.png"))); // NOI18N
         stop.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,7 +68,7 @@ public class FlowSwing extends javax.swing.JFrame {
                 stopMouseClicked(evt);
             }
         });
-        getContentPane().add(stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 130, 100));
+        getContentPane().add(stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 130, 100));
 
         btnAddMusic.setBackground(new java.awt.Color(204, 204, 255));
         btnAddMusic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addmusica.png"))); // NOI18N
@@ -77,11 +77,11 @@ public class FlowSwing extends javax.swing.JFrame {
                 btnAddMusicActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAddMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 190, 190));
+        getContentPane().add(btnAddMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 190, 190));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fondoastetik2.jpg"))); // NOI18N
         fondo.setOpaque(true);
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 480));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,7 +102,7 @@ public class FlowSwing extends javax.swing.JFrame {
             for (File file : files) {
                 mp3player.addToPlayList(file);
 
-                // Agrega el name del archivo a la lista
+                // Agrega el nombre del archivo a la lista
                 DefaultListModel<String> model = (DefaultListModel<String>) musica.getModel();
                 model.addElement(file.getName());
             }
